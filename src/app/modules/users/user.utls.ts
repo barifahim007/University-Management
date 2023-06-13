@@ -11,5 +11,6 @@ export const findLastUserId = async () => {
 
 export const generateUserId = async () => {
   const currentId = (await findLastUserId()) || (0).toString().padStart(5, '0')
-  return currentId
+  const incrementId = currentId + 1
+  return incrementId
 }
